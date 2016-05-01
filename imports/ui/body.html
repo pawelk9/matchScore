@@ -1,0 +1,20 @@
+<body>
+<div class="container">
+    <header>
+        <h1>Match Score</h1>
+    </header>
+
+    <form class="new-match">
+        <input type="text" name="matchName" placeholder="Enter match name"/>
+    </form>
+</div>
+<ul>
+    {{#each matches}}
+        {{> matchesTemplate}}
+    {{/each}}
+</ul>
+</body>
+
+<template name="matchesTemplate">
+    <li>{{matchName}}</li>
+</template>
