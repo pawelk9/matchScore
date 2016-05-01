@@ -7,14 +7,12 @@
     <form class="new-match">
         <input type="text" name="matchName" placeholder="Enter match name"/>
     </form>
+    <ul>
+        {{#each matches}}
+            {{> matchesTemplate}}
+        {{/each}}
+    </ul>
 </div>
-<ul>
-    {{#each matches}}
-        {{> matchesTemplate}}
-    {{/each}}
-</ul>
+
 </body>
 
-<template name="matchesTemplate">
-    <li>{{matchName}}</li>
-</template>

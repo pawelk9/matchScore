@@ -1,7 +1,8 @@
 import { Template } from "meteor/templating";
-
 import { Matches } from '../api/matchesCollection';
+
 import "./body.html";
+import "./match.js"
 
 
 Template.body.helpers({
