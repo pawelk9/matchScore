@@ -1,17 +1,20 @@
 import { Template } from "meteor/templating";
 import { Matches } from '../api/matchesCollection';
 
-import "./body.html";
 import "./match.js";
+import "../routes/routes.js";
 
 
-Template.body.helpers({
+Template.matchesTpl.helpers({
     matches() {
         return Matches.find({}, {sort: {createdAt: -1}});
+    },
+    matchesCount() {
+        return Matches.find().count();
     }
 });
 
-Template.body.events({
+Template.matchesTpl.events({
     "submit .new-match"(event) {
         event.preventDefault();
 
@@ -24,6 +27,5 @@ Template.body.events({
         });
 
         target.matchName.value = "";
-        console.log(matchName);
     }
 });

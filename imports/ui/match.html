@@ -1,6 +1,16 @@
-<template name="matchesTemplate">
-    <li>
-        {{matchName}} {{createdAt}}
-        <button class="delete">&times;</button>
-    </li>
+<template name="matchesTpl">
+    <form class="new-match">
+        <input type="text" name="matchName" placeholder="Enter match name"/>
+        <input type="submit" value="Add"/>
+    </form>
+    <ul>
+        {{#each matches}}
+            <li>
+                {{matchName}} {{createdAt}}
+                <button class="delete">&times;</button>
+            </li>
+        {{/each}}
+    </ul>
+
 </template>
+
