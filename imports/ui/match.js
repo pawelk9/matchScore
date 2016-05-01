@@ -3,6 +3,8 @@ import { Matches } from '../api/matchesCollection.js';
 
 import "./match.html";
 import "./mainTpl.html";
+import "./navigationTpl.html";
+import  "./matchTpl.html";
 
 Template.matchesTpl.events({
     "click .delete"() {

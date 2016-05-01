@@ -24,7 +24,9 @@ Template.matchesTpl.events({
         Matches.insert({
             matchName,
             createdAt: new Date()
-        });
+            },
+            (error, results) => Router.go("match", {_id: results})
+        );
 
         target.matchName.value = "";
     }

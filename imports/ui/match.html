@@ -6,11 +6,10 @@
     <ul>
         {{#each matches}}
             <li>
-                {{matchName}} {{createdAt}}
+                <a href="{{pathFor route="match"}}">{{matchName}}</a>
                 <button class="delete">&times;</button>
             </li>
         {{/each}}
     </ul>
-
 </template>
 
